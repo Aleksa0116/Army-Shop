@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kupovina</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/7fae89e373.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <body>
+    <div class="loading-screen" id="loading-screen">
+      <div class="spinner"></div>
+      <h1>Prodavnica oružja - Kupovina</h1>
+    </div>
+
+    <div class="main" id="main">
+
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Pocetna</a>
+        <div id="myLinks">
+          <a href="javascript:void(0)" onclick="openNav2()"><i class="fa fa-bars"></i></a>
+          <a href="javascript:void(0);" onclick="openContact()">Kontakt</a>
+          <a href="onama.html">O nama</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+
+      <nav class="navbar" id="nav">
+        <ul>
+          <li><a href="javascript:void(0);" class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></a></li>
+          <li class="ilink"><a href="index.html"><i class="fas fa-home"></i></a></li>
+          <li><a href="javascript:void(0);" onclick="openContact()">Kontakt</a></li>
+          <li><a href="onama.html">O nama</a></li>
+        </ul>
+        <form class="search">
+          <input onkeyup="searchCards()" onclick="searchbarclick()" onblur="searchbarclick1()" id="searchbar" type="search" autocomplete="off" placeholder="Search">
+          <button id="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </nav>
+
+      <div class="informacije">
+        
+      <h1>Informacije kartice</h1>
+      <form id="payment-form">
+        <label for="card-number">Broj kartice:</label>
+        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" />
+        <label for="card-holder">Ime i prezime:</label>
+        <input type="text" id="card-holder" name="card-holder" placeholder="Ime i prezime" />
+        <label for="expiration-month">Mesec isteka:</label>
+        <select id="expiration-month" name="expiration-month">
+          <option value="">--Izaberi mesec--</option>
+          <option value="01">Januar</option>
+          <option value="02">Februar</option>
+          <option value="03">Mart</option>
+          <option value="04">April</option>
+          <option value="05">Maj</option>
+          <option value="06">Jun</option>
+          <option value="07">Jul</option>
+          <option value="08">Avgust</option>
+          <option value="09">Septembar</option>
+          <option value="10">Oktobar</option>
+          <option value="11">Novembar</option>
+          <option value="12">Decembar</option>
+        </select>
+        <label for="expiration-year">Godina isteka:</label>
+        <input type="number" id="expiration-year" name="expiration-year" placeholder="YYYY" min="2023" max="2050">
+        <label for="cvv">CVV:</label>
+        <input type="number" id="cvv" name="cvv" placeholder="123" maxlength="3">
+        <input type="submit" value="Izvrsi kupovinu" />
+      </form>
+      </div>
+
+    </div>
+
+    <div class="sidenav" id="mySidenav">
+      <a href="javascript:void(0)" onclick="closeNav()" class="openbtn"><i class="fa-solid fa-xmark"></i></a>
+      <h2>RAK(A)ETA</h2>
+      <div class="dropdown">
+        <a href="javascript:void(0);" class="dropbtn">Oruzije <i class="fa-solid fa-arrow-down"></i></a>
+        <div class="dropdown-content">
+          <a class="opcije" href="puske.html">Puske</a>
+          <a class="opcije" href="pistolji.html">Pistolji</a>
+          <a class="opcije" href="#">Nozevi</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="javascript:void(0);" class="dropbtn">Oprema <i class="fa-solid fa-arrow-down"></i></a>
+        <div class="dropdown-content">
+          <a class="opcije" href="#">Rancevi</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="context-menu">
+      <ul>
+        <li><a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i>Nazad</a></li>
+        <li><a href="puske.html">Puske</a></li>
+        <li><a href="pistolji.html">Pistolji</a></li>
+        <li><a href="nozevi.html">Nozevi</a></li>
+      </ul>
+    </div>
+  <!-- chat gpt -->
+  <script>
+      var contextMenu = document.getElementById("context-menu");
+      var body = document.getElementsByTagName("body")[0];
+      
+      contextMenu.style.display = "none";
+      
+      body.addEventListener("contextmenu", function(event) {
+        event.preventDefault();
+        
+        contextMenu.style.display = "block";
+        
+        contextMenu.style.left = event.pageX + "px";
+        contextMenu.style.top = event.pageY + "px";
+      });
+      
+      body.addEventListener("click", function() {
+        contextMenu.style.display = "none";
+      });
+      </script> 
+
+    <script>
+        const form = document.getElementById("payment-form");
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const cardNumber = document.getElementById("card-number").value;
+  const cardHolder = document.getElementById("card-holder").value;
+  const expirationMonth = document.getElementById("expiration-month").value;
+  const expirationYear = document.getElementById("expiration-year").value;
+  const cvv = document.getElementById("cvv").value;
+
+  if (cardNumber === "") {
+    showError("Molimo Vas unesite broj kartice");
+    return;
+  }
+
+  if (cardHolder === "") {
+    showError("Molim Vas unesite ime i prezime");
+    return;
+  }
+
+  if (expirationMonth === "") {
+    showError("Molimo Vas unesite mesec isteka kartice");
+    return;
+  }
+
+  if (expirationYear === "") {
+    showError("Molimo Vas unesite godinu isteka kartice");
+    return;
+  }
+
+  if (cvv === "") {
+    showError("Molimo Vas unesite CVV kod");
+    return;
+  }
+
+  alert("Kupovina uspesno izvrsena!");
+}
+
+function showError(errorMessage) {
+  const errorDiv = document.createElement("div");
+  errorDiv.className = "error";
+  errorDiv.textContent = errorMessage;
+  const form = document.getElementById("payment-form");
+  form.insertBefore(errorDiv, form.firstChild);
+  setTimeout(() => errorDiv.remove(), 5000);
+}
+    </script>
+
+  </body>
+</html>

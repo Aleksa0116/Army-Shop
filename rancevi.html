@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodavnica oruzija - Puske</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/7fae89e373.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Vrh</button> 
+
+  <!-- chatgpt -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="spinner"></div>
+    <h1>Prodavnica oružja</h1>
+  </div>
+
+    <div class="main" id="main">
+
+        <!-- Za telefone -->
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Pocetna</a>
+          <div id="myLinks">
+            <a href="javascript:void(0)" onclick="openNav2()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" onclick="openContact()">Kontakt</a>
+            <a href="onama.html">O nama</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+
+        <nav class="navbar" id="nav">
+          <ul>
+            <li><a href="javascript:void(0);" class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></a></li>
+            <li class="ilink"><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="javascript:void(0);" onclick="openContact()">Kontakt</a></li>
+            <li><a href="onama.html">O nama</a></li>
+          </ul>
+          <form class="search">
+            <input onkeyup="searchCards()" onclick="searchbarclick()" onblur="searchbarclick1()" id="searchbar" type="search" autocomplete="off" placeholder="Search">
+            <button id="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </nav>
+        
+        <div id="contact-modal">
+          <div class="contact-modal-content">
+            <span class="close-btn" onclick="closeContact()">&times;</span>
+            <h2>Kontakt informacije</h2>
+            <p>Broj telefona: 069-1771-814</p>
+            <p>Email: 2611620@teslabg.edu.rs</p>
+            <p>Adresa: Kraljice Natalije 31, Beograd</p>
+          </div>
+        </div>
+
+
+        <!-- https://www.free-css.com/free-css-templates/page160/eaglestroop -->
+        <div class="row-bot">
+          <div class="main2">
+            <figure class="img-indent-r"><img style="position: relative;" src="slike/page1-img1.png" alt=""></figure>
+            <div class="extra-wrap indent"> <strong class="naslov">Dobrodosli u Raka(e)ta prodavnicu oruzija!</strong>
+              <p>Dobrodošli u našu online prodavnicu oružja, gde možete pronaći sve što vam je potrebno za lov, sport ili samo kao sredstvo za samoodbranu. U našoj prodavnici imamo širok 
+                asortiman proizvoda - od pištolja i pušaka do noževa i rančeva. Naša strast za oružjem ogleda se u kvalitetu proizvoda koje nudimo, i uvek ćemo vam pružiti najbolju moguću 
+                uslugu i savetovanje kako biste bili sigurni u vaš izbor.</p>
+            <div class="clear"></div>
+          </div>
+        </div>
+        </div>
+
+          <div class="proizvodi">
+            <div class="kartica">
+              <div style="background-image: url(oruzijeslike/Branditolivezeleniranac50L.png);" class="card"></div>
+              <div class="holo"></div>
+              <div class="detalji">
+                <img src="logo/branditlogo.png" alt="Logo Bredna" class="logo">
+                <h2>Brandit olive Zeleni</h2>
+                <p>Cena: <span class="cena">213.500</span> dinara</p>
+                <p>Detalji:</p>
+                <ul>
+                  <li>Brend: Brandit</li>
+                  <li>Kapacitet: 50l</li>
+                  <li>Materijal: 100% najlon</li>
+                </ul>
+                <a href="oprema/rancevi/branditolivezeleni50l.html"><button class="kupi"><i class="fas fa-shopping-cart"></i> Kupi</button></a>
+              </div>
+            </div>
+
+
+        </div>
+
+
+      </div>
+
+
+<div class="sidenav" id="mySidenav">
+  <a href="javascript:void(0)" onclick="closeNav()" class="openbtn"><i class="fa-solid fa-xmark"></i></a>
+  <h2>RAK(A)ETA</h2>
+  <div class="dropdown">
+    <a href="javascript:void(0);" class="dropbtn">Oruzije <i class="fa-solid fa-arrow-down"></i></a>
+    <div class="dropdown-content">
+      <a class="opcije" href="puske.html">Puske</a>
+      <a class="opcije" href="pistolji.html">Pistolji</a>
+      <a class="opcije" href="#">Nozevi</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a href="javascript:void(0);" class="dropbtn">Oprema <i class="fa-solid fa-arrow-down"></i></a>
+    <div class="dropdown-content">
+      <a class="opcije" href="../rancevi.html">Rancevi</a>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="contact-info">
+      <h3>Kontaktirajte nas</h3>
+      <p>Adresa: Kraljice Natalije 31, Beograd</p>
+      <p>Telefon: 069-1771-814</p>
+      <p>Email: 2611620@teslabg.edu.rs</p>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.827139038079!2d20.460600114855497!3d44.81772837909897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a709a2017ef6b%3A0xb71a4b5f242b710!2sKraljice%20Natalije%2031%2C%20Beograd%2C%20Serbia!5e0!3m2!1sen!2sus!4v1650911058681!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="social">
+      <h3>Pratite nas</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="copyright">
+    <p>&copy; 2023 Raka(e)ta Prodavnica Oružja. Sva prava zadržana.</p>
+  </div>
+</footer>
+
+
+
+<script>
+  function searchCards() {
+    // Dobijemo upit iz input polja
+    var query = document.getElementById("searchbar").value.toLowerCase();
+    
+    // Dobijemo sve kartice
+    var cards = document.querySelectorAll(".kartica");
+  
+    // Idemo kroz svaku karticu i provjeravamo naslov
+    for (var i = 0; i < cards.length; i++) {
+      var title = cards[i].querySelector("h2").innerText.toLowerCase();
+  
+      // Ako naslov sadrži upit, prikažemo karticu
+      if (title.indexOf(query) > -1) {
+        cards[i].style.display = "block";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+</script>
+
+<script>
+    var contextMenu = document.getElementById("context-menu");
+    var body = document.getElementsByTagName("body")[0];
+    
+    contextMenu.style.display = "none";
+    
+    body.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+      
+      contextMenu.style.display = "block";
+      
+      contextMenu.style.left = event.pageX + "px";
+      contextMenu.style.top = event.pageY + "px";
+    });
+    
+    body.addEventListener("click", function() {
+      contextMenu.style.display = "none";
+    });
+    </script> 
+
+<script>
+  // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+</body>
+</html>

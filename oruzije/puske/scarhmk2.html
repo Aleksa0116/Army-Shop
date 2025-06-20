@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Karabin</title>
+    <link rel="stylesheet" href="../../style.css">
+
+    <script src="../../script.js"></script>
+    <script src="https://kit.fontawesome.com/7fae89e373.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Vrh</button> 
+
+  <!-- chatgpt -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="spinner"></div>
+    <h1>Prodavnica oružja - FN SCAR-H Mk2</h1>
+  </div>
+
+    <div class="main" id="main">
+
+        <!-- Za telefone -->
+        <div class="topnav" id="myTopnav">
+          <a href="../../index.html" class="active">Pocetna</a>
+          <div id="myLinks">
+            <a href="javascript:void(0)" onclick="openNav2()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" onclick="openContact()">Kontakt</a>
+            <a href="../../onama.html">O nama</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+
+
+        <nav class="navbar" id="nav">
+          <ul>
+            <li><a href="javascript:void(0);" class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></a></li>
+            <li class="ilink"><a href="../../index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="javascript:void(0);" onclick="openContact()">Kontakt</a></li>
+            <li><a href="../../onama.html">O nama</a></li>
+          </ul>
+          <form class="search">
+            <input onkeyup="searchCards()" onclick="searchbarclick()" onblur="searchbarclick1()" id="searchbar" type="search" autocomplete="off" placeholder="Search">
+            <button id="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </nav>
+        
+        <div id="contact-modal">
+          <div class="contact-modal-content">
+            <span class="close-btn" onclick="closeContact()">&times;</span>
+            <h2>Kontakt informacije</h2>
+            <p>Broj telefona: 069-1771-814</p>
+            <p>Email: 2611620@teslabg.edu.rs</p>
+            <p>Adresa: Kraljice Natalije 31, Beograd</p>
+          </div>
+        </div>
+
+        <div class="proizvod">           
+          <div class="puskazoom">
+            <img src="../../oruzijeslike/fnscar-hmk2.png" alt="opis slike">
+          </div>
+
+          <button class="kupi2">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Kupi sada</span>
+          </button>
+        
+          <h2>M4 Karabin</h2> <br>
+          <p><b>Brend: </b>FN Herstal</p>
+          <p><b>Kalibar: </b> 7.62 * 51 mm</p> <br>
+          <p><b>Masa:</b> 3.58 kg</p> <br>
+          <p><b>Duzina:</b> 965 mm</p> <br>
+          <p><b>Duzina cevi:</b> 400 mm</p> <br>
+          <p><b>Magacin:</b> 20 metaka</p> <br>
+          <p><b>Brzina zrna:</b> 714 m/s</p> <br>
+          <p class="opispuske">
+            FN SCAR-H je modularna puška koja je dizajnirana za prilagodbu različitim zadacima i zahtevima. Puška ima sklopive kundake i mogućnost zamene cevi, što omogućava brzo prilagođavanje
+             duzine i konfiguracije<br><br>
+
+             Glavne komponente FN SCAR-H puške izrađene su od visokokvalitetnih polimera i legura, što pruža izdržljivost uz relativno malu težinu. <br> <br>
+
+             Sastav nišanjenja kod FN SCAR-H ima Picatinny šine na gornjoj površini puške koje omogućuju priključivanje različitih optičkih nišana, svjetiljki i drugih dodataka <br> <br>
+
+             Efikasni domet kod FN SCAR-H ima veći efikasni domet u poredjenju s FN SCAR-L zbog kalibra 7.62x51mm NATO. To pruža veću snagu i udaljenost paljbe <br> <br>
+
+             FN SCAR-H je poznat po svojoj pouzdanosti i izdržljivosti, što ga čini popularnim izborom u mnogim vojnim i specijalnim snagama širom svijeta
+          </p>
+          
+                      
+        </div>
+
+
+      </div>
+
+      
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" onclick="closeNav()" class="openbtn"><i class="fa-solid fa-xmark"></i></a>
+    <h2>RAK(A)ETA</h2>
+    <div class="dropdown">
+      <a href="javascript:void(0);" class="dropbtn">Oruzije <i class="fa-solid fa-arrow-down"></i></a>
+      <div class="dropdown-content">
+        <a class="opcije" href="../../puske.html">Puske</a>
+        <a class="opcije" href="../../pistolji.html">Pistolji</a>
+        <a class="opcije" href="../../nozevi.html">Nozevi</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="javascript:void(0);" class="dropbtn">Oprema <i class="fa-solid fa-arrow-down"></i></a>
+      <div class="dropdown-content">
+        <a class="opcije" href="../../rancevi.html">Rancevi</a>
+      </div>
+    </div>
+  </div>
+
+
+      <!-- footer -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="contact-info">
+      <h3>Kontaktirajte nas</h3>
+      <p>Adresa: Kraljice Natalije 31, Beograd</p>
+      <p>Telefon: 069-1771-814</p>
+      <p>Email: 2611620@teslabg.edu.rs</p>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.827139038079!2d20.460600114855497!3d44.81772837909897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a709a2017ef6b%3A0xb71a4b5f242b710!2sKraljice%20Natalije%2031%2C%20Beograd%2C%20Serbia!5e0!3m2!1sen!2sus!4v1650911058681!5m2!1sen!2sus" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="social">
+      <h3>Pratite nas</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+  <div class="copyright">
+    <p>&copy; 2023 Raka(e)ta Prodavnica Oružja. Sva prava zadržana.</p>
+  </div>
+</footer>
+
+
+<div id="context-menu">
+  <ul>
+    <li><a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i>Nazad</a></li>
+    <li><a href="../../puske.html">Puske</a></li>
+    <li><a href="../../pistolji.html">Pistolji</a></li>
+    <li><a href="../../nozevi.html">Nozevi</a></li>
+  </ul>
+</div>
+<!-- chat gpt -->
+<script>
+  var contextMenu = document.getElementById("context-menu");
+  var body = document.getElementsByTagName("body")[0];
+  
+  contextMenu.style.display = "none";
+  
+  body.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+    
+    contextMenu.style.display = "block";
+    
+    contextMenu.style.left = event.pageX + "px";
+    contextMenu.style.top = event.pageY + "px";
+  });
+  
+  body.addEventListener("click", function() {
+    contextMenu.style.display = "none";
+  });
+  </script> 
+
+
+<script>
+          // chatgpt
+      // uvelicavanje slike preko hovera za puske
+      const container = document.querySelector(".puskazoom");
+      const img = container.querySelector("img");
+
+      container.addEventListener("mousemove", (e) => {
+        const x = (e.pageX - container.offsetLeft) / container.offsetWidth;
+        const y = (e.pageY - container.offsetTop) / container.offsetHeight;
+
+        img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+      });
+
+</script>
+
+<script>
+  // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+</body>
+</html>
